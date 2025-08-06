@@ -8,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class Perfil {
 
+  urlImagem = "https://media.tenor.com/KNALQSk1p7gAAAAM/yugioh-yugi.gif";
+
+
+  private mensagem: string = "minha mensagem";
+
+  getMensagem() {
+
+    return this.mensagem;
+  }
 }
+
+
