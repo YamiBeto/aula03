@@ -1,4 +1,4 @@
-import { Component, Input, signal } from '@angular/core';
+import { Component, EventEmitter, Input, Output, signal } from '@angular/core';
 
 @Component({
   selector: 'app-produto-detalhe',
@@ -7,7 +7,9 @@ import { Component, Input, signal } from '@angular/core';
   styleUrl: './produto-detalhe.css'
 })
 export class ProdutoDetalhe {
-@Input() nomeProduto = signal(''); 
-@Input() precoProduto = signal(0);
-@Input() url_Produto = signal ('');
+@Input() nomeProduto = signal<string>(''); 
+@Input() precoProduto = signal<number>(0);
+@Input() url_Produto = signal<string> ('');
+@Output() clicado = new EventEmitter<void>();
 }
+
